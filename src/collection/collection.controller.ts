@@ -6,7 +6,12 @@ export class CollectionController {
   constructor(private readonly collectionService: CollectionService) {}
 
   @Get()
-  findAll() {
+  findAllNFTsInCollection() {
     return this.collectionService.findAllNFTsInCollection();
+  }
+
+  @Get('collection')
+  getCollectionDetails() {
+    return this.collectionService.getCollectionDetails();
   }
 }
